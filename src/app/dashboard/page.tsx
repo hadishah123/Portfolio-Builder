@@ -18,8 +18,10 @@ export default function DashboardPage() {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Welcome, {session?.user?.name}!</h1>
-      <p className="mb-6">This is your dashboard. Soon you'll be able to add and manage case studies here.</p>
+      <h1 className="text-3xl font-bold">
+        {session?.user?.name ? `${session.user.name}&rsquo;s Portfolio` : 'Your Portfolio'}
+      </h1>
+      <p className="mb-6">This is your dashboard. Soon you&rsquo;ll be able to add and manage case studies here.</p>
 
       {/* Placeholder for Case Study Form */}
       <div className="border p-4 rounded-xl bg-gray-50 text-gray-800">
